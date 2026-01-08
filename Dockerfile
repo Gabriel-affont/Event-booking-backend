@@ -1,27 +1,21 @@
-# Use the official .NET 8 SDK image for building
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
-
-# Copy csproj and restore dependencies
-COPY *.csproj ./
-RUN dotnet restore
-
-# Copy everything else and build
-COPY . ./
-RUN dotnet publish -c Release -o out
-
-# Build runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
-WORKDIR /app
-COPY --from=build /app/out .
-
-# Create directory for uploaded files
-RUN mkdir -p /app/wwwroot/uploads
-
-# Expose port (Render assigns PORT environment variable)
 EXPOSE 8080
 
-# Set ASP.NET Core to listen on the port Render assigns
-ENV ASPNETCORE_URLS=http://+:8080
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
 
-ENTRYPOINT ["dotnet", "Event-booking.Api.dll"]
+# Copy the project file
+COPY ["Event booking.Api.csproj", "."]
+RUN dotnet restore "./Event booking.Api.csproj"
+
+COPY . .
+RUN dotnet build "Event booking.Api.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "Event booking.Api.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "Event booking.Api.dll"]  # Note: SPACE not hyphen
