@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Event booking.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04b36d3d00169377568e22a5a9a0653a2bdd2f3f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f94d011ca671b34cb6b14409f6230621f3f759e3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Event booking.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Event booking.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
