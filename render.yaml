@@ -4,8 +4,8 @@ services:
     env: docker
     plan: starter
     region: oregon
-    databaseName: eventbooking
-    databaseUser: eventbooking_user
+    postgresDatabase: eventbooking  
+    postgresUser: eventbooking_user  
 
   - type: web
     name: eventbooking-api
