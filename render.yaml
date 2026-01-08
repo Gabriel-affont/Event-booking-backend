@@ -1,20 +1,17 @@
 services:
-  # PostgreSQL Database
   - type: pserv
     name: eventbooking-db
     env: docker
-    plan: starter # Free tier
+    plan: starter
     region: oregon
-    databases:
-      - name: eventbooking
-        user: eventbooking_user
+    databaseName: eventbooking
+    databaseUser: eventbooking_user
 
-  # Web Service
   - type: web
     name: eventbooking-api
     env: docker
     region: oregon
-    plan: starter # Free tier
+    plan: starter
     dockerfilePath: ./Dockerfile
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
@@ -24,7 +21,7 @@ services:
           name: eventbooking-db
           property: connectionString
       - key: Jwt__Key
-        generateValue: true # Auto-generate secure key
+        generateValue: true
       - key: Jwt__Issuer
         value: EventBookingApi
       - key: Jwt__Audience
