@@ -1,42 +1,49 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\",
+  "WorkspaceRootPath": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|c:\\users\\suclinxs tech\\source\\repos\\event booking.api\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|solutionrelative:controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|c:\\users\\suclinxs tech\\onedrive\\documents\\github\\event-booking-backend\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|c:\\users\\suclinxs tech\\source\\repos\\event booking.api\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|solutionrelative:models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|c:\\users\\suclinxs tech\\onedrive\\documents\\github\\event-booking-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|c:\\users\\suclinxs tech\\source\\repos\\event booking.api\\dtos\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|solutionrelative:dtos\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|c:\\users\\suclinxs tech\\source\\repos\\event booking.api\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|solutionrelative:controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|c:\\users\\suclinxs tech\\source\\repos\\event booking.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|c:\\users\\suclinxs tech\\onedrive\\documents\\github\\event-booking-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|c:\\users\\suclinxs tech\\source\\repos\\event booking.api\\dtos\\eventdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|c:\\users\\suclinxs tech\\onedrive\\documents\\github\\event-booking-backend\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|solutionrelative:controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|c:\\users\\suclinxs tech\\onedrive\\documents\\github\\event-booking-backend\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|solutionrelative:models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|c:\\users\\suclinxs tech\\onedrive\\documents\\github\\event-booking-backend\\dtos\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|solutionrelative:dtos\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|c:\\users\\suclinxs tech\\onedrive\\documents\\github\\event-booking-backend\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|solutionrelative:controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|c:\\users\\suclinxs tech\\onedrive\\documents\\github\\event-booking-backend\\dtos\\eventdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|solutionrelative:dtos\\eventdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|c:\\users\\suclinxs tech\\source\\repos\\event booking.api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|c:\\users\\suclinxs tech\\onedrive\\documents\\github\\event-booking-backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|c:\\users\\suclinxs tech\\source\\repos\\event booking.api\\migrations\\20250917101048_addeventimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|solutionrelative:migrations\\20250917101048_addeventimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|c:\\users\\suclinxs tech\\onedrive\\documents\\github\\event-booking-backend\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|c:\\users\\suclinxs tech\\source\\repos\\event booking.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{208C52BB-A944-4E88-9DF4-77F9FD765B08}|Event booking.Api.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Migrations\\20250917101048_AddEventImage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,67 +53,90 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "BookingController.cs",
-              "DocumentMoniker": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Controllers\\BookingController.cs",
+              "DocumentMoniker": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Controllers\\BookingController.cs",
               "RelativeDocumentMoniker": "Controllers\\BookingController.cs",
-              "ToolTip": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Controllers\\BookingController.cs*",
-              "RelativeToolTip": "Controllers\\BookingController.cs*",
+              "ToolTip": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "Controllers\\BookingController.cs",
               "ViewState": "AgIAACcAAABA/v////8bwDQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-05T20:28:55.443Z",
-              "IsPinned": true,
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Data\\AppDbContext.cs*",
+              "RelativeToolTip": "Data\\AppDbContext.cs*",
+              "ViewState": "AgIAAEwAAAAAl5mZmRkTwGcAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T11:54:55.629Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Booking.cs",
-              "DocumentMoniker": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Models\\Booking.cs",
-              "RelativeDocumentMoniker": "Models\\Booking.cs",
-              "ToolTip": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Models\\Booking.cs",
-              "RelativeToolTip": "Models\\Booking.cs",
-              "ViewState": "AgIAAAkAAABAmJmZmZklwBcAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T12:28:41.971Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BookingDto.cs",
-              "DocumentMoniker": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Dtos\\BookingDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\BookingDto.cs",
-              "ToolTip": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Dtos\\BookingDto.cs",
-              "RelativeToolTip": "Dtos\\BookingDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T12:28:29.055Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-07T13:35:50.322Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Models\\Booking.cs",
+              "RelativeDocumentMoniker": "Models\\Booking.cs",
+              "ToolTip": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Models\\Booking.cs",
+              "RelativeToolTip": "Models\\Booking.cs",
+              "ViewState": "AgIAAAkAAABAmJmZmZklwBcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T12:28:41.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BookingDto.cs",
+              "DocumentMoniker": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Dtos\\BookingDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\BookingDto.cs",
+              "ToolTip": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Dtos\\BookingDto.cs",
+              "RelativeToolTip": "Dtos\\BookingDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T12:28:29.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAD0AAAAA6DIzMzPzv0QAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-17T10:25:39.027Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "EventsController.cs",
-              "DocumentMoniker": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Controllers\\EventsController.cs",
+              "DocumentMoniker": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Controllers\\EventsController.cs",
               "RelativeDocumentMoniker": "Controllers\\EventsController.cs",
-              "ToolTip": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Controllers\\EventsController.cs",
+              "ToolTip": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Controllers\\EventsController.cs",
               "RelativeToolTip": "Controllers\\EventsController.cs",
               "ViewState": "AgIAAIwAAAAAAAAAAAAswJ4AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -114,11 +144,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "EventDto.cs",
-              "DocumentMoniker": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Dtos\\EventDto.cs",
+              "DocumentMoniker": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Dtos\\EventDto.cs",
               "RelativeDocumentMoniker": "Dtos\\EventDto.cs",
-              "ToolTip": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Dtos\\EventDto.cs",
+              "ToolTip": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Dtos\\EventDto.cs",
               "RelativeToolTip": "Dtos\\EventDto.cs",
               "ViewState": "AgIAAAUAAAAQmpmZmZk3wAsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -126,23 +156,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "20250917101048_AddEventImage.cs",
               "DocumentMoniker": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Migrations\\20250917101048_AddEventImage.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250917101048_AddEventImage.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\Event booking.Api\\Migrations\\20250917101048_AddEventImage.cs",
               "ToolTip": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Migrations\\20250917101048_AddEventImage.cs",
-              "RelativeToolTip": "Migrations\\20250917101048_AddEventImage.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\Event booking.Api\\Migrations\\20250917101048_AddEventImage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-17T10:10:51.123Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Models\\User.cs",
+              "DocumentMoniker": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Models\\User.cs",
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAA3wA4AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -150,11 +180,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Controllers\\UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Controllers\\UsersController.cs",
               "RelativeToolTip": "Controllers\\UsersController.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAiwBIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

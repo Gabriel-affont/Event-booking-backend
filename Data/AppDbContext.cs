@@ -60,7 +60,8 @@ namespace EventBooking.Api.Data
                     Email = "john@example.com",
                     PasswordHash = "hashedpassword1",
                     Role = UserRole.Attendee,
-                    CreatedAt = new DateTime(2024, 1, 1)
+                    CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, DateTimeKind.Utc)
+
                 },
                 new User
                 {
@@ -69,7 +70,8 @@ namespace EventBooking.Api.Data
                     Email = "organizer@example.com",
                     PasswordHash = "hashedpassword2",
                     Role = UserRole.Organizer,
-                    CreatedAt = new DateTime(2024, 1, 1)
+                    CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, DateTimeKind.Utc)
+
                 },
                 new User
                 {
@@ -78,7 +80,8 @@ namespace EventBooking.Api.Data
                     Email = "organizer@example.com",
                     PasswordHash = "hashedpassword2",
                     Role = UserRole.Admin,
-                    CreatedAt = new DateTime(2024, 1, 1)
+                    CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, DateTimeKind.Utc)
+
                 }
             );
 
@@ -91,15 +94,17 @@ namespace EventBooking.Api.Data
                     Title = "Tech Conference 2025",
                     Description = "Annual technology conference",
                     Location = "Convention Center",
-                    Date = new DateTime(2025, 3, 15),
+                    Date = new DateTime(2025, 3, 15, 0, 0, 0, DateTimeKind.Utc),
+
                     OrganizerId = organizerId,
                     TotalSeats = 100,
                     AvailableSeats = 85,
                     Price = 50.00m,
-                   
-                    CreatedAt = new DateTime(2024, 1, 1)
+
+                    CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, DateTimeKind.Utc)
                 }
             );
+
         }
     }
 }

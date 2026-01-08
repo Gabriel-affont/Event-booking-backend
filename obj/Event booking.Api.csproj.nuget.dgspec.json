@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Event booking.Api.csproj": {}
+    "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Event booking.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Event booking.Api.csproj": {
+    "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Event booking.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Event booking.Api.csproj",
+        "projectUniqueName": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Event booking.Api.csproj",
         "projectName": "Event booking.Api",
-        "projectPath": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\Event booking.Api.csproj",
+        "projectPath": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\Event booking.Api.csproj",
         "packagesPath": "C:\\Users\\SUCLINXS TECH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SUCLINXS TECH\\source\\repos\\Event booking.Api\\obj\\",
+        "outputPath": "C:\\Users\\SUCLINXS TECH\\OneDrive\\Documents\\GitHub\\Event-booking-backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -62,6 +62,12 @@
               "target": "Package",
               "version": "[9.0.8, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.8, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[9.0.8, )"
@@ -71,6 +77,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.8, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
