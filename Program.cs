@@ -11,16 +11,22 @@ var builder = WebApplication.CreateBuilder(args);
 // Services
 // -----------------------------
 
-// Add DbContext (SQL Server connection string from appsettings.json)
+// Configure form options
 builder.Services.Configure<FormOptions>(options =>
 {
     options.MultipartBodyLengthLimit = 10 * 1024 * 1024; // 10 MB
 });
 
+// Configure database connection with fallback for local development
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+if (string.IsNullOrEmpty(connectionString))
+{
+    // Fallback for local development
+    connectionString = "Host=localhost;Port=5432;Database=EventBookingDb;Username=postgres;Password=gabu";
+}
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+    options.UseNpgsql(connectionString));
 
 // Add controllers + Swagger
 builder.Services.AddControllers();
@@ -62,11 +68,23 @@ var app = builder.Build();
 // -----------------------------
 // Middleware
 // -----------------------------
+
+// Apply database migrations automatically in production
+if (!app.Environment.IsDevelopment())
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+        dbContext.Database.Migrate();
+    }
+}
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 app.UseStaticFiles();
 
 // Use HTTPS
