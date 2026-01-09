@@ -19,10 +19,32 @@ builder.Services.Configure<FormOptions>(options =>
 
 // Configure database connection with fallback for local development
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+// Render provides DATABASE_URL (postgres://...)
 if (string.IsNullOrEmpty(connectionString))
 {
-    // Fallback for local development
-    connectionString = "Host=localhost;Port=5432;Database=EventBookingDb;Username=postgres;Password=gabu";
+    var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
+
+    if (!string.IsNullOrEmpty(databaseUrl))
+    {
+        // Convert postgres:// to Npgsql format
+        var uri = new Uri(databaseUrl);
+        var userInfo = uri.UserInfo.Split(':');
+
+        connectionString =
+            $"Host={uri.Host};" +
+            $"Port={uri.Port};" +
+            $"Database={uri.AbsolutePath.TrimStart('/')};" +
+            $"Username={userInfo[0]};" +
+            $"Password={userInfo[1]};" +
+            $"SSL Mode=Require;Trust Server Certificate=true";
+    }
+    else
+    {
+        // Local fallback
+        connectionString =
+            "Host=localhost;Port=5432;Database=EventBookingDb;Username=postgres;Password=gabu";
+    }
 }
 
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -70,14 +92,13 @@ var app = builder.Build();
 // -----------------------------
 
 // Apply database migrations automatically in production
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
-    using (var scope = app.Services.CreateScope())
-    {
-        var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        dbContext.Database.Migrate();
-    }
+    using var scope = app.Services.CreateScope();
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.Migrate();
 }
+
 
 if (app.Environment.IsDevelopment())
 {
