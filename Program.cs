@@ -1,4 +1,4 @@
-using EventBooking.Api.Data;
+﻿using EventBooking.Api.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
@@ -88,28 +88,34 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 // -----------------------------
+// Apply Database Migrations (Production & Development)
+// -----------------------------
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    try
+    {
+        db.Database.Migrate();
+        Console.WriteLine("✅ Database migrations applied successfully");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"❌ Migration error: {ex.Message}");
+    }
+}
+
+// -----------------------------
 // Middleware
 // -----------------------------
 
-// Apply database migrations automatically in production
-if (app.Environment.IsDevelopment())
-{
-    using var scope = app.Services.CreateScope();
-    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    db.Database.Migrate();
-}
-
-
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// Enable Swagger in ALL environments (for testing)
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseStaticFiles();
 
-// Use HTTPS
-app.UseHttpsRedirection();
+// Use HTTPS redirection (optional - Render handles SSL)
+// app.UseHttpsRedirection();
 
 // Use CORS (must be before Authentication/Controllers)
 app.UseCors("AllowFrontend");
@@ -120,5 +126,14 @@ app.UseAuthorization();
 
 // Map controllers
 app.MapControllers();
+
+// Add a health check endpoint
+app.MapGet("/", () => Results.Ok(new
+{
+    status = "healthy",
+    service = "Event Booking API",
+    environment = app.Environment.EnvironmentName,
+    timestamp = DateTime.UtcNow
+}));
 
 app.Run();
