@@ -7,27 +7,22 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// -----------------------------
-// Services
-// -----------------------------
-
-// Configure form options
 builder.Services.Configure<FormOptions>(options =>
 {
     options.MultipartBodyLengthLimit = 10 * 1024 * 1024; // 10 MB
 });
 
-// Configure database connection with fallback for local development
+
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-// Render provides DATABASE_URL (postgres://...)
+
 if (string.IsNullOrEmpty(connectionString))
 {
     var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
 
     if (!string.IsNullOrEmpty(databaseUrl))
     {
-        // Convert postgres:// to Npgsql format
+       
         var uri = new Uri(databaseUrl);
         var userInfo = uri.UserInfo.Split(':');
 
@@ -76,20 +71,32 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddAuthorization();
 
 // Add CORS policy (Frontend: Next.js)
+// Get frontend URL from environment variable or use default
+var frontendUrl = builder.Configuration["FrontendUrl"] ?? Environment.GetEnvironmentVariable("FRONTEND_URL");
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend",
-        policy => policy
-            .WithOrigins("http://localhost:3000") // Next.js dev server
-            .AllowAnyMethod()
-            .AllowAnyHeader());
+        policy =>
+        {
+            var origins = new List<string> { "http://localhost:3000" }; // Local dev
+
+            // Add production frontend URL if provided
+            if (!string.IsNullOrEmpty(frontendUrl))
+            {
+                origins.Add(frontendUrl);
+            }
+
+            policy.WithOrigins(origins.ToArray())
+                  .AllowAnyMethod()
+                  .AllowAnyHeader()
+                  .AllowCredentials(); 
+        });
 });
 
 var app = builder.Build();
 
-// -----------------------------
-// Apply Database Migrations (Production & Development)
-// -----------------------------
+
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
@@ -113,11 +120,6 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseStaticFiles();
-
-// Use HTTPS redirection (optional - Render handles SSL)
-// app.UseHttpsRedirection();
-
-// Use CORS (must be before Authentication/Controllers)
 app.UseCors("AllowFrontend");
 
 // Use Authentication + Authorization
