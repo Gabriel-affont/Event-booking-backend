@@ -76,7 +76,8 @@ builder.Services.AddCors(options =>
         {
             "http://localhost:3000",                                    
             "https://event-booking-frontend-ez99.vercel.app",          
-            "https://event-booking-frontend-beige.vercel.app"          
+            "https://event-booking-frontend-beige.vercel.app",
+            "https://event-booking-frontend-vajb.vercel.app/"
         };
 
         // Also check for environment variable
