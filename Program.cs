@@ -12,9 +12,7 @@ builder.Services.Configure<FormOptions>(options =>
     options.MultipartBodyLengthLimit = 10 * 1024 * 1024; // 10 MB
 });
 
-
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-
 
 if (string.IsNullOrEmpty(connectionString))
 {
@@ -22,7 +20,6 @@ if (string.IsNullOrEmpty(connectionString))
 
     if (!string.IsNullOrEmpty(databaseUrl))
     {
-       
         var uri = new Uri(databaseUrl);
         var userInfo = uri.UserInfo.Split(':');
 
@@ -70,32 +67,41 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 // Add Authorization
 builder.Services.AddAuthorization();
 
-// Add CORS policy (Frontend: Next.js)
-// Get frontend URL from environment variable or use default
-var frontendUrl = builder.Configuration["FrontendUrl"] ?? Environment.GetEnvironmentVariable("FRONTEND_URL");
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowFrontend",
-        policy =>
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        var allowedOrigins = new List<string>
         {
-            var origins = new List<string> { "http://localhost:3000" }; // Local dev
+            "http://localhost:3000",                                    
+            "https://event-booking-frontend-ez99.vercel.app",          
+            "https://event-booking-frontend-beige.vercel.app"          
+        };
 
-            // Add production frontend URL if provided
-            if (!string.IsNullOrEmpty(frontendUrl))
-            {
-                origins.Add(frontendUrl);
-            }
+        // Also check for environment variable
+        var frontendUrl = builder.Configuration["FrontendUrl"] ??
+                         Environment.GetEnvironmentVariable("FRONTEND_URL");
 
-            policy.WithOrigins(origins.ToArray())
-                  .AllowAnyMethod()
-                  .AllowAnyHeader()
-                  .AllowCredentials(); 
-        });
+        if (!string.IsNullOrEmpty(frontendUrl) && !allowedOrigins.Contains(frontendUrl))
+        {
+            allowedOrigins.Add(frontendUrl);
+        }
+
+        Console.WriteLine("🌐 CORS Allowed Origins:");
+        foreach (var origin in allowedOrigins)
+        {
+            Console.WriteLine($"   - {origin}");
+        }
+
+        policy.WithOrigins(allowedOrigins.ToArray())
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              .AllowCredentials();
+    });
 });
 
 var app = builder.Build();
-
 
 using (var scope = app.Services.CreateScope())
 {
@@ -112,7 +118,7 @@ using (var scope = app.Services.CreateScope())
 }
 
 // -----------------------------
-// Middleware
+// Middleware (ORDER MATTERS!)
 // -----------------------------
 
 // Enable Swagger in ALL environments (for testing)
@@ -120,6 +126,8 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseStaticFiles();
+
+// ✅ CORS must come BEFORE Authentication
 app.UseCors("AllowFrontend");
 
 // Use Authentication + Authorization
